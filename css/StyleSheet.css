@@ -4,6 +4,12 @@
     color: #999999;
     font-size: 300;
     font-size: 16px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 ol,
@@ -339,19 +345,17 @@ hr.botm-line3 {
   }
   
 .card-grid {
-    width:100%;
+    width:100%;    
   }
   .card-grid:after {
     content: "";
     display: table;
     clear: both;
-  }
-  
-  
+  }  
   
   .card-wrap {
     float:left;
-    width:100%;
+    width:100%;    
     padding:5px;
   }
   @media (min-width: 500px) {
@@ -363,14 +367,14 @@ hr.botm-line3 {
     .card-wrap {
       width:25%;
     }
-  }
-  
+  }  
   
   .card {
     background-color:white;
     border-radius:5px;
     border:1px solid #ccc;
     border-bottom:2px solid #ccc;
+    height: 430px;
   }
   .card > div {
     padding:0 1em;
