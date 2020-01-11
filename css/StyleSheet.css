@@ -311,7 +311,11 @@ hr.botm-line3 {
 }
 
 .service-info {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
+}
+
+.service-skill {    
+    margin-bottom: 110px;
 }
 
 .icon-info h4 {
