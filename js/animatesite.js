@@ -39,6 +39,7 @@ TxtType.prototype.tick = function () {
         that.tick();
     }, delta);
 };
+
 window.onload = function () {
     var elements = document.getElementsByClassName('typewrite');
     for (var i = 0; i < elements.length; i++) {
@@ -54,14 +55,16 @@ window.onload = function () {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
 };
+//typewriter end
 
+// Scroll effect Navbar setting class on on scroll
 (function ($) {
     //jQuery to collapse the navbar on scroll
     $(window).scroll(function () {
         if ($(".navbar-default").offset().top > 50) {
-            $(".navbar-fixed-top").addClass("top-nav-collapse");
+            $(".fixed-top").addClass("top-nav-collapse");
         } else {
-            $(".navbar-fixed-top").removeClass("top-nav-collapse");
+            $(".fixed-top").removeClass("top-nav-collapse");
         }
     });
 

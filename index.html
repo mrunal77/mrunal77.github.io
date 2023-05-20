@@ -37,36 +37,37 @@
   <!--Home-->
   <section id="home" class="banner">
     <div class="bg-color">
-      <nav class="navbar navbar-default navbar-fixed-top" id="menu">
+      <nav class="navbar navbar-expand-lg navbar-default fixed-top" id="menu">
         <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-              data-target="#myNavbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar top-bar"></span>
-              <span class="icon-bar middle-bar"></span>
-              <span class="icon-bar bottom-bar"></span>
-            </button>
-            <a class="navbar-brand scrolling" href="#home">
-              <img src="img/logo.png" class="img-responsive" style="width: 140px; margin-top: -16px;" />
-            </a>
-          </div>
-          <div class="collapse navbar-collapse navbar-right" id="myNavbar">
-            <ul class="nav navbar-nav">
-              <li>
-                <a class="scrolling" href="#home"><b>Home</b></a>
+          <!-- <div class="navbar-header"> -->
+          <a class="navbar-brand scrolling" href="#home">
+            <img src="img/logo.png" class="img-responsive" style="width: 140px; margin-top: -16px;" />
+          </a>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false"
+            aria-controls="myNavbar" aria-label="Menu">
+            <span class="navbar-toggler-icon"></span>
+            <!-- <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span> -->
+          </button>
+          <!-- </div> -->
+          <div class="collapse navbar-collapse justify-content-end" id="myNavbar">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link scrolling" href="#home"><b>Home</b></a>
               </li>
-              <li>
-                <a class="scrolling" href="#edu"><b>Education</b></a>
+              <li class="nav-item">
+                <a class="nav-link scrolling" href="#edu"><b>Education</b></a>
               </li>
-              <li>
-                <a class="scrolling" href="#skills"><b>Skills</b></a>
+              <li class="nav-item">
+                <a class="nav-link scrolling" href="#skills"><b>Skills</b></a>
+      
+              <li class="nav-item">
+                <a class="nav-link scrolling" href="#projects"><b>Projects</b></a>
               </li>
-              <li>
-                <a class="scrolling" href="#projects"><b>Projects</b></a>
-              </li>
-              <li>
-                <a class="scrolling" href="#contact"><b>Contact</b></a>
+              <li class="nav-item">
+                <a class="nav-link scrolling" href="#contact"><b>Contact</b></a>
               </li>
             </ul>
           </div>
@@ -305,12 +306,12 @@
   <!--Extra Skills-->
   <section
     style="background:url('./img/bg-banner1.jpg') no-repeat fixed; background-size: cover; padding-bottom: 40px; padding-top: 5px;">
-    <div class="container pad1">
+    <div class="container pad1 text-center">
       <h3 class="white">
         Extra Essential Skills
       </h3>
       <br />
-      <div class="row">
+      <div class="container row">
         <div class="col-md-3 col-sm-3 col-xs-6">
           <div class="c100 p85 red">
             <span>HTML</span>
@@ -358,50 +359,50 @@
       <h2>Projects</h2>
       <hr class="botm-line3" />
       <br />
-      <div class="col-md-12 col-sm-12 card-grid">
+      <div class="col-md-12 col-sm-12 row">
         <!-- <div class=""> -->
-        <div class="card-wrap">
-          <div class="card projects">
+        <div class="col-md-3 col-sm-3">
+          <div class="card h-100 projects">
             <img src="img/school.jpeg" class="card-img" />
-            <div>
-              <h4>School Manager</h4>
-              <p>
+            <div class="card-body">
+              <h4 class="card-title">School Manager</h4>
+              <p class="card-text">
                 A Web project. It give simplified solution for the managing
                 the School information with integration of database.
               </p>
             </div>
           </div>
         </div>
-        <div class="card-wrap">
-          <div class="card projects">
+        <div class="col-md-3 col-sm-3">
+          <div class="card h-100 projects">
             <img src="img/resume_web.jpeg" class="card-img" />
-            <div>
-              <h4>Personal profile Website</h4>
-              <p>
+            <div class="card-body">
+              <h4 class="card-title">Personal profile Website</h4>
+              <p class="card-text">
                 Use of estonising technologies like HTML, JQuery and CSS and
                 the result is in front of you as this website.
               </p>
             </div>
           </div>
         </div>
-        <div class="card-wrap">
-          <div class="card projects">
+        <div class="col-md-3 col-sm-3">
+          <div class="card h-100 projects">
             <img src="img/captcha.jpeg" class="card-img" />
-            <div>
-              <h4>College Mega Project</h4>
-              <p>
+            <div class="card-body">
+              <h4 class="card-title">College Mega Project</h4>
+              <p class="card-text">
                 Using a Captcha as a password which will secure the password
                 hacking from bots and other issues.
               </p>
             </div>
           </div>
         </div>
-        <div class="card-wrap">
-          <div class="card projects">
+        <div class="col-md-3 col-sm-3">
+          <div class="card h-100 projects">
             <img src="img/convert.jpg" class="card-img" />
-            <div>
-              <h4>College Mini Project</h4>
-              <p>
+            <div class="card-body">
+              <h4 class="card-title">College Mini Project</h4>
+              <p class="card-text">
                 Unit Converter is very useful tool in the day to day life,
                 Which simplifies the conversion of Units, Currency and Many
                 More.
@@ -486,7 +487,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-sm-6 col-md-6 text-center" style="color:whitesmoke;">
+        <div class="col-sm-6 col-md-6 text-center icons" style="color:whitesmoke;">
           Designed in - 2017
         </div>
       </div>

@@ -142,7 +142,7 @@ hr.botm-line3 {
 }
 
 .top-nav-collapse {
-    padding: 0;
+    padding: 3px;
     background: rgba(28, 29, 28, 0.650);
 }
 
@@ -188,6 +188,10 @@ hr.botm-line3 {
 .affix .navbar-nav>li>a:focus {
     background-color: rgb(28, 29, 28);
     /*rgb(12, 184, 182) !important;*/
+}
+
+.nav-link {
+    font-size: large;
 }
 
 .banner {
@@ -339,7 +343,7 @@ hr.botm-line3 {
 
 
 /*projects*/
-*, *:after, *:before {
+/* *, *:after, *:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -356,14 +360,14 @@ hr.botm-line3 {
     content: "";
     display: table;
     clear: both;
-  }  
+  }   */
   
-  .card-wrap {
+  /* .card-wrap {
     float:left;
     width:100%;    
     padding:5px;
-  }
-  @media (min-width: 500px) {
+  } */
+  /* @media (min-width: 500px) {
     .card-wrap {
       width:50%;
     }
@@ -372,9 +376,9 @@ hr.botm-line3 {
     .card-wrap {
       width:25%;
     }
-  }  
+  }   */
   
-  .card {
+  /* .card {
     background-color:white;
     border-radius:5px;
     border:1px solid #ccc;
@@ -383,4 +387,4 @@ hr.botm-line3 {
   }
   .card > div {
     padding:0 1em;
-  }
+  } */
