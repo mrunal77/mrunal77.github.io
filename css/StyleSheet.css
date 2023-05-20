@@ -127,7 +127,7 @@ hr.botm-line3 {
 
 .navbar-brand {
     font-family: 'Chewy', cursive;
-    font-size: 32px;
+    font-size: 32px;    
 }
 
 .navbar-brand img {
@@ -142,7 +142,7 @@ hr.botm-line3 {
 }
 
 .top-nav-collapse {
-    padding: 3px;
+    padding: 0;    
     background: rgba(28, 29, 28, 0.650);
 }
 
@@ -325,11 +325,12 @@ hr.botm-line3 {
     font-size: 45px;
     margin-bottom: 25px;
 }
+
 .service-info {
     margin-bottom: 60px;
 }
 
-.service-skill {    
+.service-skill {
     margin-bottom: 110px;
 }
 
@@ -343,48 +344,54 @@ hr.botm-line3 {
 
 
 /*projects*/
-/* *, *:after, *:before {
+*,
+*:after,
+*:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-  }
+}
 
-  img {
-    max-width:100%;
-  }
-  
+img {
+    max-width: 100%;
+}
+
 .card-grid {
-    width:100%;    
-  }
-  .card-grid:after {
+    width: 100%;
+}
+
+.card-grid:after {
     content: "";
     display: table;
     clear: both;
-  }   */
-  
-  /* .card-wrap {
-    float:left;
-    width:100%;    
-    padding:5px;
-  } */
-  /* @media (min-width: 500px) {
+}
+
+.card-wrap {
+    float: left;
+    width: 100%;
+    padding: 5px;
+}
+
+@media (min-width: 500px) {
     .card-wrap {
-      width:50%;
+        width: 50%;
     }
-  }
-  @media (min-width: 720px) {
+}
+
+@media (min-width: 720px) {
     .card-wrap {
-      width:25%;
+        width: 25%;
     }
-  }   */
-  
-  /* .card {
-    background-color:white;
-    border-radius:5px;
-    border:1px solid #ccc;
-    border-bottom:2px solid #ccc;
+}
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
     height: 430px;
-  }
-  .card > div {
-    padding:0 1em;
-  } */
+}
+
+.card>div {
+    padding: 0 1em;
+}
