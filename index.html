@@ -17,7 +17,7 @@
   <link href="css/StyleSheet.css" rel="stylesheet" />
   <link href="css/icons.min.css" rel="stylesheet" />
   <link href="css/circle.min.css" rel="stylesheet" />
-  <link href="css/app.min.css" rel="stylesheet" />
+  <link href="css/app.css" rel="stylesheet" />
   <link href="css/jquery.wm-gridfolio-1.0.min.css" />
   <!--==/ Stylesheet==-->
 
@@ -27,7 +27,7 @@
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   <script src="js/smoothscroll.js"></script>
   <script src="js/animatesite.js"></script>
-  <script src="js/scrollrevealanimation.js"></script>
+  <!-- <script src="js/scrollrevealanimation.js"></script> -->
   <!--==/ Scripts==-->
 </head>
 
@@ -38,8 +38,8 @@
       <nav class="navbar navbar-default navbar-fixed-top" id="menu">
         <div class="container">
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar"
-              aria-expanded="false" aria-controls="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#myNavbar" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar top-bar"></span>
               <span class="icon-bar middle-bar"></span>
@@ -52,19 +52,19 @@
           <div class="collapse navbar-collapse navbar-right" id="myNavbar">
             <ul class="nav navbar-nav">
               <li>
-                <a class="scrolling" href="#home">Home</a>
+                <a class="scrolling" href="#home"><b>Home</b></a>
               </li>
               <li>
-                <a class="scrolling" href="#edu">Education</a>
+                <a class="scrolling" href="#edu"><b>Education</b></a>
               </li>
               <li>
-                <a class="scrolling" href="#skills">Skills</a>
+                <a class="scrolling" href="#skills"><b>Skills</b></a>
               </li>
               <li>
-                <a class="scrolling" href="#projects">Projects</a>
+                <a class="scrolling" href="#projects"><b>Projects</b></a>
               </li>
               <li>
-                <a class="scrolling" href="#contact">Contact</a>
+                <a class="scrolling" href="#contact"><b>Contact</b></a>
               </li>
             </ul>
           </div>
@@ -112,81 +112,106 @@
           </p>
         </div>
 
-        <!--Col1-->
-        <div class="col-md-4 col-sm-4">
-          <div class="service-info engiNeering">
-            <div class="icon1">
-              <i id="graduation" class="fa fa-graduation-cap"></i>
+        <div class="col-md-8 col-sm-8">
+          <!--Row 1-->
+          <div class="row">
+
+            <div class="col-md-6 col-sm-6">
+              <div class="service-info engiNeering">
+                <div class="icon1">
+                  <i id="graduation" class="fa fa-graduation-cap"></i>
+                </div>
+                <div>
+                  <h4>Bachelor of Engineering</h4>
+                  <p>
+                    I have done my Graduation from Nagpur University in Computer
+                    technology with 6.94 CGPA.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div>
-              <h4>Bachelor of Engineering</h4>
-              <p>
-                I have done my Graduation from Nagpur University in Computer
-                technology with 6.94 CGPA.
-              </p>
+
+            <div class="col-md-6 col-sm-6">
+              <div class="service-info twelth">
+                <div class="icon4">
+                  <i id="diploma" class="fa fa-certificate"></i>
+                </div>
+                <div>
+                  <h4>
+                    CDAC Diploma in PG-DASSD
+                  </h4>
+                  <p>
+                    I have Diploma in PG-DASSD from CDAC Hyderabad with Grade 'B'
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="service-info twelth">
-            <div class="icon2">
-              <i id="twelth" class="fa fa-university"></i>
+          <!-- Row 2 -->
+          <div class="row">
+
+            <!--Col2-->
+            <div class="col-md-6 col-sm-6">
+
+              <div class="service-info certificate">
+                <div class="icon">
+                  <i class="fa fa-certificate"></i>
+                </div>
+                <div>
+                  <h4>MTA Certification</h4>
+                  <p>
+                    I have Successfully passed MTA (Microsoft Technology
+                    Associate) certification exam from Microsoft IT Academy.
+                  </p>
+                </div>
+              </div>              
             </div>
-            <div>
-              <h4>
-                Higher Secondary School (12
-                <sup>th</sup>)
-              </h4>
-              <p>
-                I have passed my HSC exam from Saraswati Junior College with
-                82.17%
-              </p>
+            <div class="col-md-6 col-sm-6">
+              <div class="service-info twelth">
+                <div class="icon2">
+                  <i id="twelth" class="fa fa-university"></i>
+                </div>
+                <div>
+                  <h4>
+                    Higher Secondary School (12
+                    <sup>th</sup>)
+                  </h4>
+                  <p>
+                    I have passed my HSC exam from Saraswati Junior College with
+                    82.17%
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Row 3 -->
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="service-info tenth">
+                <div class="icon3">
+                  <i id="cert" class="fa fa-university"></i>
+                </div>
+                <div>
+                  <h4>
+                    Secondary School Certificate (10
+                    <sup>th</sup>)
+                  </h4>
+                  <p>
+                    I have passed my SSC exam from Dr. BhaBha Vidyalaya, Zarpada
+                    with 87.82%.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+              <!-- New Add -->
             </div>
           </div>
 
-          <div class="service-info twelth">
-            <div class="icon4">
-              <i id="diploma" class="fa fa-certificate"></i>
-            </div>
-            <div>
-              <h4>
-                CDAC Diploma in PG-DASSD
-              </h4>
-              <p>
-                I have Diploma in PG-DASSD from CDAC Hyderabad with Grade 'B'               
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!--Col2-->
-        <div class="col-md-4 col-sm-4">
-          <div class="service-info tenth">
-            <div class="icon3">
-              <i id="cert" class="fa fa-university"></i>
-            </div>
-            <div>
-              <h4>
-                Secondary School Certificate (10
-                <sup>th</sup>)
-              </h4>
-              <p>
-                I have passed my SSC exam from Dr. BhaBha Vidyalaya, Zarpada
-                with 87.82%.
-              </p>
-            </div>
-          </div>
-          <div class="service-info certificate">
-            <div class="icon">
-              <i class="fa fa-certificate"></i>
-            </div>
-            <div>
-              <h4>MTA Certification</h4>
-              <p>
-                I have Successfully passed MTA (Microsoft Technology
-                Associate) certification exam from Microsoft IT Academy.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -463,7 +488,7 @@
           Designed in - 2017
         </div>
       </div>
-    </div>          
+    </div>
   </footer>
   <!--/ footer-->
 
@@ -515,6 +540,10 @@
       origin: "right"
     });
     sr.reveal(".certificate", {
+      duration: 2000,
+      origin: "right"
+    });
+    sr.reveal(".diploma", {
       duration: 2000,
       origin: "right"
     });
