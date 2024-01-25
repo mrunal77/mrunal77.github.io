@@ -395,3 +395,8 @@ img {
 .card>div {
     padding: 0 1em;
 }
+
+.card:hover{
+    box-shadow: 8px 8px 8px cadetblue;
+    transform:scale(0.9);
+}
