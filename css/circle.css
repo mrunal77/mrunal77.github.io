@@ -1064,18 +1064,118 @@
   color: #e08833;
 }
 
-/*red*/
-.c100.red .bar,
-.c100.red .fill {
-  border-color: #f51c1c !important;
+/*chocolate*/
+.c100.chocolate .bar,
+.c100.chocolate .fill {
+  border-color: chocolate !important;
 }
-.c100.red:hover > span {
-  color: #f51c1c;
+.c100.chocolate:hover > span {
+  color: chocolate;
 }
-.c100.red.dark .bar,
-.c100.red.dark .fill {
-  border-color: #ff0000 !important;
+.c100.chocolate.dark .bar,
+.c100.chocolate.dark .fill {
+  border-color: chocolate !important;
 }
-.c100.red.dark:hover > span {
-  color: #ff0000;
+.c100.chocolate.dark:hover > span {
+  color: chocolate;
 }
+
+/*blueviolet*/
+.c100.blueviolet .bar,
+.c100.blueviolet .fill {
+  border-color: blueviolet !important;
+}
+.c100.blueviolet:hover > span {
+  color: blueviolet;
+}
+.c100.blueviolet.dark .bar,
+.c100.blueviolet.dark .fill {
+  border-color: blueviolet !important;
+}
+.c100.blueviolet.dark:hover > span {
+  color: blueviolet;
+}
+
+/*gitblack*/
+.c100.gitblack .bar,
+.c100.gitblack .fill {
+  border-color: grey !important;
+}
+.c100.gitblack:hover > span {
+  color: grey;
+}
+.c100.gitblack.dark .bar,
+.c100.gitblack.dark .fill {
+  border-color: grey !important;
+}
+.c100.gitblack.dark:hover > span {
+  color: grey;
+}
+
+/*Azure*/
+.c100.azure .bar,
+.c100.azure .fill {
+  border-color: rgb(6, 180, 237) !important;
+}
+.c100.azure:hover > span {
+  color: rgb(6, 180, 237);
+}
+.c100.azure.dark .bar,
+.c100.azure.dark .fill {
+  border-color: rgb(6, 180, 237) !important;
+}
+.c100.azure.dark:hover > span {
+  color: rgb(6, 180, 237);
+}
+
+
+/*Extra Skills*/
+/*HTML*/
+.c100.html .bar,
+.c100.html .fill {
+  border-color: rgb(242, 162, 87) !important;
+}
+.c100.html:hover > span {
+  color: rgb(242, 162, 87);
+}
+.c100.html.dark .bar,
+.c100.html.dark .fill {
+  border-color: rgb(242, 162, 87) !important;
+}
+.c100.html.dark:hover > span {
+  color: rgb(242, 162, 87);
+}
+
+/*JS*/
+.c100.js .bar,
+.c100.js .fill {
+  border-color: rgb(255, 117, 211) !important;
+}
+.c100.js:hover > span {
+  color: rgb(255, 117, 211);
+}
+.c100.js.dark .bar,
+.c100.js.dark .fill {
+  border-color: rgb(255, 117, 211) !important;
+}
+.c100.js.dark:hover > span {
+  color: rgb(255, 117, 211);
+}
+
+/*CSS*/
+.c100.css .bar,
+.c100.css .fill {
+  border-color: rgb(167, 94, 222) !important;
+}
+.c100.css:hover > span {
+  color: rgb(167, 94, 222);
+}
+.c100.css.dark .bar,
+.c100.css.dark .fill {
+  border-color: rgb(167, 94, 222) !important;
+}
+.c100.css.dark:hover > span {
+  color: rgb(167, 94, 222);
+}
+
+
