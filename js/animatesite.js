@@ -1,4 +1,3 @@
-// Type writer Effect Code 
 var TxtType = function (el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -8,6 +7,7 @@ var TxtType = function (el, toRotate, period) {
     this.tick();
     this.isDeleting = false;
 };
+
 TxtType.prototype.tick = function () {
     var i = this.loopNum % this.toRotate.length;
     var fullTxt = this.toRotate[i];
@@ -21,10 +21,10 @@ TxtType.prototype.tick = function () {
     this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
     var that = this;
-    var delta = 200 - Math.random() * 100;
+    var delta = 100 - Math.random() * 50; // Faster typing speed
 
     if (this.isDeleting) {
-        delta /= 2;
+        delta /= 2; // Faster deletion speed
     }
 
     if (!this.isDeleting && this.txt === fullTxt) {
@@ -33,8 +33,9 @@ TxtType.prototype.tick = function () {
     } else if (this.isDeleting && this.txt === '') {
         this.isDeleting = false;
         this.loopNum++;
-        delta = 500;
+        delta = 300; // Short pause after completing a word before typing the next
     }
+
     setTimeout(function () {
         that.tick();
     }, delta);
@@ -52,14 +53,21 @@ window.onload = function () {
     // INJECT CSS
     var css = document.createElement("style");
     css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+    css.innerHTML = `
+        .typewrite > .wrap { 
+            border-right: 0.08em solid #fff;
+            animation: blink-cursor 1s step-end infinite;
+        }
+        @keyframes blink-cursor {
+            0%, 100% { border-color: transparent; }
+            50% { border-color: #fff; }
+        }
+    `;
     document.body.appendChild(css);
 };
-//typewriter end
 
-// Scroll effect Navbar setting class on on scroll
+// Scroll effect Navbar setting class on scroll
 (function ($) {
-    //jQuery to collapse the navbar on scroll
     $(window).scroll(function () {
         if ($(".navbar-default").offset().top > 50) {
             $(".fixed-top").addClass("top-nav-collapse");
@@ -67,5 +75,4 @@ window.onload = function () {
             $(".fixed-top").removeClass("top-nav-collapse");
         }
     });
-
 })(jQuery);
