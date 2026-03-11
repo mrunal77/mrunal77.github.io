@@ -1,72 +1,117 @@
 document.addEventListener("contextmenu", event => event.preventDefault());
     window.sr = ScrollReveal({
-      reset: true
+      reset: true,
+      distance: '50px',
+      duration: 1000,
+      easing: 'ease-out',
+      origin: 'bottom',
+      viewFactor: 0.2
     });
+    
     sr.reveal(".banner-center", {
-      duration: 3000,
-      origin: "top"
+      duration: 1500,
+      origin: "top",
+      delay: 200
     });
+    
     sr.reveal(".pad1", {
-      duration: 2000,
-      origin: "bottom"
+      duration: 1200,
+      origin: "bottom",
+      delay: 200
     });
+    
     sr.reveal(".cSharp", {
-      duration: 2000,
-      origin: "right"
+      duration: 1000,
+      origin: "right",
+      delay: 150,
+      interval: 200
     });
-    sr.reveal(".cSharp", {
-      duration: 2000,
-      origin: "right"
-    });
+    
     sr.reveal(".Sql", {
-      duration: 2000,
-      origin: "right"
+      duration: 1000,
+      origin: "right",
+      delay: 150
     });
+    
     sr.reveal(".Mvc", {
-      duration: 2000,
-      origin: "right"
+      duration: 1000,
+      origin: "right",
+      delay: 150,
+      interval: 200
     });
+    
     sr.reveal(".skillTitle", {
-      duration: 2000,
+      duration: 1000,
       origin: "left"
     });
+    
     sr.reveal(".engiNeering", {
-      duration: 2000,
-      origin: "right"
+      duration: 1000,
+      origin: "right",
+      delay: 100
     });
+    
     sr.reveal(".twelth", {
-      duration: 2000,
-      origin: "right"
+      duration: 1000,
+      origin: "right",
+      delay: 200
     });
+    
     sr.reveal(".tenth", {
-      duration: 2000,
-      origin: "right"
+      duration: 1000,
+      origin: "right",
+      delay: 300
     });
+    
     sr.reveal(".certificate", {
-      duration: 2000,
-      origin: "right"
+      duration: 1000,
+      origin: "right",
+      delay: 400
     });
+    
     sr.reveal(".diploma", {
-      duration: 2000,
-      origin: "right"
+      duration: 1000,
+      origin: "right",
+      delay: 500
     });
+    
     sr.reveal(".educationTitle", {
-      duration: 2000,
+      duration: 1000,
       origin: "left"
     });
-    sr.reveal(".projects", {
-      duration: 2000,
-      origin: "bottom"
+    
+    sr.reveal(".projects .card", {
+      duration: 1000,
+      origin: "bottom",
+      delay: 150,
+      interval: 200
     });
+    
     sr.reveal(".contact", {
-      duration: 2000,
-      origin: "bottom"
+      duration: 1000,
+      origin: "bottom",
+      delay: 100,
+      interval: 150
     });
+    
     sr.reveal(".contact-title", {
-      duration: 2000,
+      duration: 1000,
       origin: "left"
     });
+    
     sr.reveal(".icons", {
-      duration: 2000,
+      duration: 1000,
       origin: "bottom"
+    });
+    
+    sr.reveal(".extra-skill", {
+      duration: 1000,
+      origin: "bottom",
+      delay: 100,
+      interval: 150
+    });
+    
+    sr.reveal(".ser-title", {
+      duration: 800,
+      origin: "left"
     });

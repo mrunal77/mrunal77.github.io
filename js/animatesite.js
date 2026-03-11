@@ -21,10 +21,10 @@ TxtType.prototype.tick = function () {
     this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
     var that = this;
-    var delta = 100 - Math.random() * 50; // Faster typing speed
+    var delta = 100 - Math.random() * 50;
 
     if (this.isDeleting) {
-        delta /= 2; // Faster deletion speed
+        delta /= 2;
     }
 
     if (!this.isDeleting && this.txt === fullTxt) {
@@ -33,7 +33,7 @@ TxtType.prototype.tick = function () {
     } else if (this.isDeleting && this.txt === '') {
         this.isDeleting = false;
         this.loopNum++;
-        delta = 300; // Short pause after completing a word before typing the next
+        delta = 300;
     }
 
     setTimeout(function () {
@@ -50,13 +50,12 @@ window.onload = function () {
             new TxtType(elements[i], JSON.parse(toRotate), period);
         }
     }
-    // INJECT CSS
     var css = document.createElement("style");
     css.type = "text/css";
     css.innerHTML = `
         .typewrite > .wrap { 
-            border-right: 0.08em solid #fff;
-            animation: blink-cursor 1s step-end infinite;
+            border-right: 0.1em solid #fff;
+            animation: blink-cursor 0.75s step-end infinite;
         }
         @keyframes blink-cursor {
             0%, 100% { border-color: transparent; }
@@ -66,13 +65,24 @@ window.onload = function () {
     document.body.appendChild(css);
 };
 
-// Scroll effect Navbar setting class on scroll
 (function ($) {
     $(window).scroll(function () {
         if ($(".navbar-default").offset().top > 50) {
-            $(".fixed-top").addClass("top-nav-collapse");
+            $(".fixed-top").addClass("shrink");
         } else {
-            $(".fixed-top").removeClass("top-nav-collapse");
+            $(".fixed-top").removeClass("shrink");
         }
+    });
+    
+    $('.scrolling').on('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top - 70
+        }, 1000, 'easeInOutExpo');
+        event.preventDefault();
+    });
+
+    $('.navbar-nav>li>a').on('click', function(){
+        $('.navbar-collapse').collapse('hide');
     });
 })(jQuery);
