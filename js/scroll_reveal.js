@@ -87,6 +87,12 @@ document.addEventListener("contextmenu", event => event.preventDefault());
       interval: 200
     });
     
+    sr.reveal(".view-more-card", {
+      duration: 1000,
+      origin: "top",
+      delay: 300
+    });
+    
     sr.reveal(".contact", {
       duration: 1000,
       origin: "bottom",
@@ -120,4 +126,10 @@ sr.reveal(".ser-title", {
     sr.reveal("#footer", {
       duration: 1000,
       origin: "bottom"
+    });
+    
+    sr.reveal(".designed-text", {
+      duration: 1000,
+      origin: "right",
+      delay: 300
     });
