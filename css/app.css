@@ -48,6 +48,30 @@ section {
 	background: transparent !important;
 }
 
+/* Mobile view navbar styles */
+@media (max-width: 991px) {
+	.navbar-collapse {
+		background-color: rgba(28, 29, 28, 0.95);
+		padding: 15px;
+		margin-top: 10px;
+	}
+	
+	.navbar .nav-link {
+		padding: 10px 15px;
+		text-align: center;
+	}
+	
+	.navbar .nav-link::after {
+		display: none;
+	}
+	
+	.navbar .nav-link.active {
+		color: #ff6b6b !important;
+		border-left: 3px solid #ff6b6b;
+		background: rgba(255, 107, 107, 0.1) !important;
+	}
+}
+
 .navbar.shrink .nav-link.active {
 	color: #ff6b6b !important;
 }
