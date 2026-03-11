@@ -65,6 +65,69 @@ article.body h1 {
 	box-shadow: none;
 }
 
+/* Base hamburger icon styles */
+.navbar-toggler-icon {
+	display: inline-block;
+	width: 22px;
+	height: 2px;
+	background: white;
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+	content: '';
+	position: absolute;
+	width: 22px;
+	height: 2px;
+	background: white;
+	left: 0;
+	transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+	top: -7px;
+}
+
+.navbar-toggler-icon::after {
+	top: 7px;
+}
+
+/* Default state - hamburger (3 lines) */
+.navbar-toggler .navbar-toggler-icon {
+	background: white !important;
+}
+
+.navbar-toggler .navbar-toggler-icon::before {
+	top: -7px !important;
+	transform: rotate(0deg) !important;
+}
+
+.navbar-toggler .navbar-toggler-icon::after {
+	top: 7px !important;
+	transform: rotate(0deg) !important;
+}
+
+/* When menu is open (aria-expanded="true") - show X */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+	background: transparent !important;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+	top: 0 !important;
+	transform: rotate(45deg) !important;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+	top: 0 !important;
+	transform: rotate(-45deg) !important;
+}
+
+.navbar-toggler:focus {
+	box-shadow: none;
+}
+
 .navbar-toggler-icon {
 	display: inline-block;
 	width: 22px;
@@ -403,4 +466,61 @@ article.body h1 {
 
 ::-webkit-scrollbar-thumb:hover {
 	background: linear-gradient(180deg, #ff4757, #2ed573);
+}
+
+/* Footer Styling */
+#footer {
+	padding: 30px 0;
+}
+
+#footer .list-inline {
+	margin-bottom: 15px;
+}
+
+#footer .icons li {
+	margin: 0 10px;
+}
+
+#footer .social-icons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.1);
+	transition: all 0.3s ease;
+}
+
+#footer .social-icons:hover {
+	background: rgba(255, 255, 255, 0.25);
+	transform: translateY(-5px);
+}
+
+#footer .social-icons i {
+	font-size: 20px;
+	color: white;
+}
+
+#footer .col-sm-6:last-child {
+	color: whitesmoke;
+	font-size: 14px;
+}
+
+/* Footer Scroll Reveal Animation */
+#footer {
+	opacity: 0;
+	animation: footerFadeIn 1s ease forwards;
+	animation-delay: 0.5s;
+}
+
+@keyframes footerFadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
