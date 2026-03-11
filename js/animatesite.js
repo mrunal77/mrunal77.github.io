@@ -72,6 +72,24 @@ window.onload = function () {
         } else {
             $(".fixed-top").removeClass("shrink");
         }
+        
+        var scrollPos = $(document).scrollTop();
+        var navHeight = 70;
+        
+        $('.navbar-nav .nav-link').each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+            
+            if (refElement.length) {
+                var refTop = refElement.offset().top - navHeight;
+                var refBottom = refTop + refElement.outerHeight();
+                
+                if (scrollPos >= refTop && scrollPos < refBottom) {
+                    $('.navbar-nav .nav-link').removeClass("active");
+                    currLink.addClass("active");
+                }
+            }
+        });
     });
     
     $('.scrolling').on('click', function(event) {

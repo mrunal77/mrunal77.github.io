@@ -2,6 +2,56 @@
 	border-radius: 0px !important;
 }
 
+/* Remove grey highlight from navbar */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar-brand:hover,
+.navbar-brand:focus {
+	background-color: transparent !important;
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+/* Section offset for fixed navbar */
+section {
+	scroll-margin-top: 70px;
+}
+
+.navbar .nav-link {
+	transition: all 0.3s ease;
+	position: relative;
+}
+
+.navbar .nav-link::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 2px;
+	background: #ff6b6b;
+	transition: all 0.3s ease;
+	transform: translateX(-50%);
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+	width: 80%;
+}
+
+.navbar .nav-link.active {
+	background: transparent !important;
+}
+
+.navbar.shrink .nav-link.active {
+	color: #ff6b6b !important;
+}
+
 article.body h1 {
 	text-align: center;
 }
@@ -567,11 +617,26 @@ article.body h1 {
 
 @keyframes footerFadeIn {
 	from {
-		opacity: 0;
+	opacity: 0;
 		transform: translateY(20px);
 	}
 	to {
 		opacity: 1;
 		transform: translateY(0);
 	}
+}
+
+/* Disable text selection highlight */
+* {
+	outline: none !important;
+}
+
+*::selection {
+	background: transparent !important;
+	color: inherit !important;
+}
+
+*::-moz-selection {
+	background: transparent !important;
+	color: inherit !important;
 }
