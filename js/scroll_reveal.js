@@ -87,6 +87,20 @@ document.addEventListener("contextmenu", event => event.preventDefault());
       interval: 200
     });
     
+    sr.reveal(".project-card-left", {
+      duration: 1000,
+      origin: "left",
+      delay: 100,
+      interval: 150
+    });
+    
+    sr.reveal(".project-card-right", {
+      duration: 1000,
+      origin: "right",
+      delay: 400,
+      interval: 150
+    });
+    
     sr.reveal(".view-more-card", {
       duration: 1000,
       origin: "top",
