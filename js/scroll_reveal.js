@@ -101,7 +101,8 @@ document.addEventListener("contextmenu", event => event.preventDefault());
     
     sr.reveal(".icons", {
       duration: 1000,
-      origin: "bottom"
+      origin: "left",
+      delay: 200
     });
     
     sr.reveal(".extra-skill", {
@@ -111,7 +112,12 @@ document.addEventListener("contextmenu", event => event.preventDefault());
       interval: 150
     });
     
-    sr.reveal(".ser-title", {
+sr.reveal(".ser-title", {
       duration: 800,
       origin: "left"
+    });
+    
+    sr.reveal("#footer", {
+      duration: 1000,
+      origin: "bottom"
     });
