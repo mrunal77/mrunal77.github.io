@@ -420,14 +420,6 @@ article.body h1 {
 	box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-.service-info {
-	transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.service-info:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
 
 .service-skill {
 	transition: transform 0.4s ease;
