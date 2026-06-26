@@ -11,6 +11,18 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <!--==/Favicon==-->
 
+  <!--==Theme: init before render to prevent flash==-->
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (!theme) {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <!--==/ Theme init==-->
+
   <!--==Stylesheet==-->
   <link href="css/font-awesome.min.css" rel="stylesheet" />
   <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -20,6 +32,7 @@
   <link href="css/fontawesome-supplement.css" rel="stylesheet" />
   <link href="css/circle.css" rel="stylesheet" />
   <link href="css/app.css" rel="stylesheet" />
+  <link href="css/light-theme.css" rel="stylesheet" />
   <link href="css/jquery.wm-gridfolio-1.0.min.css" />
   <!--==/ Stylesheet==-->
 
@@ -30,26 +43,7 @@
   <script src="js/scrollreveal.min.js"></script>
   <script src="js/smoothscroll.js"></script>
   <script src="js/animatesite.js"></script>
-  <script>
-    // Disable F12 and developer tools
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'F12' || 
-          (e.ctrlKey && e.shiftKey && e.key === 'I') || 
-          (e.ctrlKey && e.shiftKey && e.key === 'J') || 
-          (e.ctrlKey && e.shiftKey && e.key === 'C') ||
-          (e.ctrlKey && e.key === 'U') ||
-          (e.ctrlKey && e.key === 'S')) {
-        e.preventDefault();
-        return false;
-      }
-    });
-    
-    // Disable right click
-    document.addEventListener('contextmenu', function(e) {
-      e.preventDefault();
-      return false;
-    });
-  </script>
+
   <!--==/ Scripts==-->
 </head>
 
@@ -86,6 +80,10 @@
                 <a class="nav-link scrolling" href="#contact">Contact</a>
               </li>
             </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+              <i class="fa-solid fa-sun icon-sun"></i>
+              <i class="fa-solid fa-moon icon-moon"></i>
+            </button>
           </div>
         </div>
       </nav>
@@ -426,13 +424,12 @@
       <h2>Projects</h2>
       <hr class="botm-line3" />
       <br />
-      <div class="row col-md-12">
-        <!-- <div class=""> -->
-        <div class="col-md-3 col-sm-3 card-space">
-          <div class="card h-100 projects project-card-left">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6 card-space">
+          <div class="card h-100 projects">
             <img src="img/school.jpeg" alt="School Manager" class="card-img" />
             <div class="card-body">
-              <a href =  "https://github.com/mrunal77/School-Operations-Project" style = "text-decoration: none;" target="_blank">
+              <a href="https://github.com/mrunal77/School-Operations-Project" style="text-decoration: none;" target="_blank">
                 <h4 class="card-title">School Manager</h4>
               </a>
               <p class="card-text">
@@ -441,11 +438,11 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-sm-3 card-space">
-          <div class="card h-100 projects project-card-left">
+        <div class="col-lg-3 col-md-6 col-sm-6 card-space">
+          <div class="card h-100 projects">
             <img src="img/resume_web.jpeg" alt="Profile Website" class="card-img" />
             <div class="card-body">
-              <a href =  "https://github.com/mrunal77/mrunal77.github.io" style = "text-decoration: none;" target="_blank">
+              <a href="https://github.com/mrunal77/mrunal77.github.io" style="text-decoration: none;" target="_blank">
                 <h4 class="card-title">Profile Website</h4>
               </a>
               <p class="card-text">
@@ -454,11 +451,11 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-sm-3 card-space">
-          <div class="card h-100 projects project-card-right">
+        <div class="col-lg-3 col-md-6 col-sm-6 card-space">
+          <div class="card h-100 projects">
             <img src="img/captcha.jpeg" alt="Final Year Project" class="card-img" />
             <div class="card-body">
-              <a href="https://ijcsmc.com/docs/papers/March2016/V5I3201699a56.pdf" style = "text-decoration: none;" target="_blank">
+              <a href="https://ijcsmc.com/docs/papers/March2016/V5I3201699a56.pdf" style="text-decoration: none;" target="_blank">
                 <h4 class="card-title">College Mega Project</h4>
               </a>
               <p class="card-text">
@@ -467,11 +464,11 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-sm-3 card-space">
-          <div class="card h-100 projects project-card-right">
+        <div class="col-lg-3 col-md-6 col-sm-6 card-space">
+          <div class="card h-100 projects">
             <img src="img/convert.jpg" alt="Mini Project" class="card-img" />
             <div class="card-body">
-              <a href="" style = "text-decoration: none;" target="_blank">
+              <a href="" style="text-decoration: none;" target="_blank">
                 <h4 class="card-title">College Mini Project</h4>
               </a>
               <p class="card-text">
@@ -480,7 +477,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-12 col-sm-12 text-center mt-4">
+        <div class="col-12 text-center mt-4">
           <div class="card h-100 projects view-more-card">
             <div class="card-body d-flex flex-column justify-content-center align-items-center">
               <a href="https://github.com/mrunal77/" style="text-decoration: none;" target="_blank">
@@ -492,7 +489,6 @@
             </div>
           </div>
         </div>
-        <!-- </div> -->
       </div>
       <br />
     </div>
@@ -593,6 +589,22 @@
   <!-- Scroll reveal animation -->
   <script src="js/scroll_reveal.js"></script>
   <!-- / Scroll reveal animation -->
+
+  <!-- Theme toggle -->
+  <script>
+    (function() {
+      var toggle = document.getElementById('themeToggle');
+      if (!toggle) return;
+      toggle.addEventListener('click', function() {
+        var html = document.documentElement;
+        var current = html.getAttribute('data-theme');
+        var next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      });
+    })();
+  </script>
+  <!-- / Theme toggle -->
 </body>
 
 </html>

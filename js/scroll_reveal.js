@@ -1,11 +1,10 @@
-document.addEventListener("contextmenu", event => event.preventDefault());
-    window.sr = ScrollReveal({
+window.sr = ScrollReveal({
       reset: true,
-      distance: '50px',
-      duration: 1000,
-      easing: 'ease-out',
+      distance: '40px',
+      duration: 800,
+      easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
       origin: 'bottom',
-      viewFactor: 0.2
+      viewFactor: 0.15
     });
     
     sr.reveal(".banner-center", {
@@ -85,20 +84,6 @@ document.addEventListener("contextmenu", event => event.preventDefault());
       origin: "bottom",
       delay: 150,
       interval: 200
-    });
-    
-    sr.reveal(".project-card-left", {
-      duration: 1000,
-      origin: "left",
-      delay: 100,
-      interval: 150
-    });
-    
-    sr.reveal(".project-card-right", {
-      duration: 1000,
-      origin: "right",
-      delay: 400,
-      interval: 150
     });
     
     sr.reveal(".view-more-card", {

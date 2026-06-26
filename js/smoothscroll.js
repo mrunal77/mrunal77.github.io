@@ -2,11 +2,13 @@ $(document).ready(function () {
 
     var scrollLink = $('.scrolling');
 
-    // Smooth scrolling
     scrollLink.click(function (e) {
         e.preventDefault();
-        $('body,html').animate({
-            scrollTop: $(this.hash).offset().top
-        }, 200);
+        var target = $(this.hash);
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top - 70
+            }, 800);
+        }
     });
 })
