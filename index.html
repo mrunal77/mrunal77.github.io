@@ -1,17 +1,61 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 
 <head>
-  <title>Mrunal Meshram</title>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mrunal Meshram - Software Developer | .NET Portfolio</title>
+  <meta name="description" content="Mrunal Meshram is a software developer specializing in C#, ASP.NET, .NET Core, and Azure. View portfolio, projects, and skills." />
+  <meta name="keywords" content="Mrunal Meshram, software developer, .NET developer, C#, ASP.NET, portfolio, web developer, India" />
+  <meta name="author" content="Mrunal Meshram" />
+  <link rel="canonical" href="https://mrunal77.github.io/" />
 
-  <!--==Favicon==-->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mrunal Meshram - Software Developer" />
+  <meta property="og:description" content="Software developer specializing in C#, ASP.NET, .NET Core, and Azure." />
+  <meta property="og:url" content="https://mrunal77.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://mrunal77.github.io/img/bannerImage.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Mrunal Meshram - Software Developer" />
+  <meta name="twitter:description" content="Software developer specializing in C#, ASP.NET, .NET Core, and Azure." />
+
+  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <!--==/Favicon==-->
+  <link rel="apple-touch-icon" href="favicon.ico" />
 
-  <!--==Theme: init before render to prevent flash==-->
+  <!-- Preconnect for external resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mrunal Meshram",
+    "url": "https://mrunal77.github.io/",
+    "image": "https://mrunal77.github.io/img/bannerImage.jpg",
+    "jobTitle": "Software Developer",
+    "email": "mrunaltmeshram@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bhandara",
+      "addressRegion": "MH",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/mrunal7794/",
+      "https://github.com/mrunal77/",
+      "https://www.facebook.com/dragon7794"
+    ]
+  }
+  </script>
+
+  <!-- Theme init before render (prevents flash) -->
   <script>
     (function() {
       var theme = localStorage.getItem('theme');
@@ -21,9 +65,8 @@
       document.documentElement.setAttribute('data-theme', theme);
     })();
   </script>
-  <!--==/ Theme init==-->
 
-  <!--==Stylesheet==-->
+  <!-- Stylesheets -->
   <link href="css/font-awesome.min.css" rel="stylesheet" />
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <link href="css/StyleSheet.css" rel="stylesheet" />
@@ -48,18 +91,20 @@
 </head>
 
 <body id="resume" data-spy="scroll" data-target=".navbar" data-offset="80" style="margin:0;">
-  <!--Home-->
-  <section id="home" class="banner">
+  <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
+
+  <!--Header / Hero-->
+  <header id="home" class="banner">
     <div class="bg-color">
-      <nav class="navbar navbar-expand-md navbar-expand-sm navbar-default fixed-top" id="menu">
+      <nav class="navbar navbar-expand-md navbar-default fixed-top" id="menu" aria-label="Main navigation">
         <div class="container">
           <div class="navbar-header">
             <a class="navbar-brand scrolling" href="#home">
-              <img src="img/logo.png" alt="Mrunal" class="img-responsive" style="width: 140px;" />
+              <img src="img/logo.png" alt="Mrunal Meshram" class="img-responsive" style="width: 140px;" />
             </a>
           </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar"
-            aria-expanded="false" aria-controls="myNavbar" aria-label="Menu">
+            aria-expanded="false" aria-controls="myNavbar" aria-label="Toggle navigation menu">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="myNavbar">
@@ -80,9 +125,9 @@
                 <a class="nav-link scrolling" href="#contact">Contact</a>
               </li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-              <i class="fa-solid fa-sun icon-sun"></i>
-              <i class="fa-solid fa-moon icon-moon"></i>
+            <button class="theme-toggle" id="themeToggle" aria-label="Switch between dark and light theme">
+              <i class="fa-solid fa-sun icon-sun" aria-hidden="true"></i>
+              <i class="fa-solid fa-moon icon-moon" aria-hidden="true"></i>
             </button>
           </div>
         </div>
@@ -91,18 +136,16 @@
         <div class="row">
           <div class="banner-info">
             <div class="text-center banner-center">
-              <img src="img/bannerImage.jpg" class="img-responsive rounded-circle profile-image" alt="Mrunal Meshram" />
-              <h1 style="color:white; font-size:44px; font-family:Georgia, 'Times New Roman', Times, serif">
-                MRUNAL MESHRAM
-              </h1>
+              <img src="img/bannerImage.jpg" class="img-responsive rounded-circle profile-image" alt="Mrunal Meshram" width="200" height="200" />
+              <h1>MRUNAL MESHRAM</h1>
             </div>
             <div class="text-center">
-              <h3>
-                <a href="" style="color: white; text-decoration: none;" class="typewrite" data-period="2000"
+              <p>
+                <span class="typewrite" data-period="2000"
                   data-type='[ "Hi, Im Mrunal.", "I am Creative.", "I Love to Design.", "I Love to Develop.", "I like Vibe Coding." ]'>
                   <span class="wrap"></span>
-                </a>
-              </h3>
+                </span>
+              </p>
             </div>
             <!-- Down Arrow -->
             <div class="overlay-detail text-center">
@@ -114,11 +157,13 @@
         </div>
       </div>
     </div>
-  </section>
-  <!--Home-->
+  </header>
+  <!--/Header-->
+
+  <main id="main">
 
   <!--education-->
-  <section id="edu" class="section-padding">
+  <section id="edu" class="section-padding" aria-label="Education">
     <div class="container">
       <div class="row">
         <div class="col-md-4 col-sm-4 educationTitle">
@@ -235,7 +280,7 @@
   <!--/ education-->
 
   <!--Skills-->
-  <section id="skills" class="section-padding" style="background-color:#f5f5df;">
+  <section id="skills" class="section-padding" style="background-color:#f5f5df;" aria-label="Technical skills">
     <div class="container">
       <div class="row">
         <div class="col-md-4 col-sm-4 skillTitle">
@@ -369,7 +414,7 @@
   <!--/ Skills-->
 
   <!--Extra Skills-->
-  <section
+  <section aria-label="Extra skills"
     style="background:url('./img/bg-banner1.jpg') no-repeat fixed; background-size: cover; padding-bottom: 40px; padding-top: 5px;">
     <div class="container pad1 text-center">
       <h3 class="white">
@@ -419,7 +464,7 @@
   <!--/Extra Skills-->
 
   <!--projects-->
-  <section id="projects" class="section-padding">
+  <section id="projects" class="section-padding" aria-label="Projects">
     <div class="container">
       <h2>Projects</h2>
       <hr class="botm-line3" />
@@ -427,7 +472,7 @@
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 card-space">
           <div class="card h-100 projects">
-            <img src="img/school.jpeg" alt="School Manager" class="card-img" />
+            <img src="img/school.jpeg" alt="School Manager" class="card-img" loading="lazy" />
             <div class="card-body">
               <a href="https://github.com/mrunal77/School-Operations-Project" style="text-decoration: none;" target="_blank">
                 <h4 class="card-title">School Manager</h4>
@@ -440,7 +485,7 @@
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6 card-space">
           <div class="card h-100 projects">
-            <img src="img/resume_web.jpeg" alt="Profile Website" class="card-img" />
+            <img src="img/resume_web.jpeg" alt="Profile Website" class="card-img" loading="lazy" />
             <div class="card-body">
               <a href="https://github.com/mrunal77/mrunal77.github.io" style="text-decoration: none;" target="_blank">
                 <h4 class="card-title">Profile Website</h4>
@@ -453,7 +498,7 @@
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6 card-space">
           <div class="card h-100 projects">
-            <img src="img/captcha.jpeg" alt="Final Year Project" class="card-img" />
+            <img src="img/captcha.jpeg" alt="CaRP authentication project screenshot" class="card-img" loading="lazy" />
             <div class="card-body">
               <a href="https://ijcsmc.com/docs/papers/March2016/V5I3201699a56.pdf" style="text-decoration: none;" target="_blank">
                 <h4 class="card-title">College Mega Project</h4>
@@ -466,11 +511,9 @@
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6 card-space">
           <div class="card h-100 projects">
-            <img src="img/convert.jpg" alt="Mini Project" class="card-img" />
+            <img src="img/convert.jpg" alt="Unit Converter mini project screenshot" class="card-img" loading="lazy" />
             <div class="card-body">
-              <a href="" style="text-decoration: none;" target="_blank">
-                <h4 class="card-title">College Mini Project</h4>
-              </a>
+              <h4 class="card-title">College Mini Project</h4>
               <p class="card-text">
                 Unit Converter is very useful tool in the day to day life, Which simplifies the conversion of Units, Currency and Many More.
               </p>
@@ -495,8 +538,10 @@
   </section>
   <!--/projects-->
 
+  </main>
+
   <!--Contact-->
-  <section id="contact" class="section-padding" style="background-color:rgba(28, 29, 28,0.911); padding-top: 40px;">
+  <section id="contact" class="section-padding" style="background-color:rgba(28, 29, 28,0.911); padding-top: 40px;" aria-label="Contact">
     <div class="container">
       <div class="contact-title">
         <h2 class="white">Contact</h2>
