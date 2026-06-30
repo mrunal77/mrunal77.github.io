@@ -356,9 +356,14 @@ article.body h1 {
 }
 
 .view-more-card .card-title {
-	color: #a855f7 !important;
+	color: #1e3a8a !important;
 	font-size: 24px;
 	margin-bottom: 10px;
+}
+
+.view-more-card:hover .card-title {
+	color: #ffffff !important;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
 }
 
 .view-more-card .card-title i {

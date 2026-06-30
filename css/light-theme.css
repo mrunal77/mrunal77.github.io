@@ -780,7 +780,12 @@ section[style*="bg-banner1.jpg"] h3.white {
 .view-more-card .card-title {
   font-size: 22px !important;
   font-weight: 700 !important;
-  color: #a855f7 !important;
+  color: #1e3a8a !important;
+}
+
+.view-more-card:hover .card-title {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
 }
 
 .view-more-card .card-title i {
