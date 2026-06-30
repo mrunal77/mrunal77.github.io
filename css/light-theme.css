@@ -3,6 +3,7 @@
    ============================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 /* =============================================
    THEME VARIABLES
@@ -10,21 +11,21 @@
 
 :root,
 [data-theme="light"] {
-  --primary: #4f46e5;
-  --primary-dark: #4338ca;
-  --primary-light: #eef2ff;
-  --secondary: #7c3aed;
-  --accent: #ec4899;
-  --gradient: linear-gradient(135deg, #4f46e5, #7c3aed, #ec4899);
-  --gradient-primary: linear-gradient(135deg, #4f46e5, #7c3aed);
-  --gradient-accent: linear-gradient(135deg, #7c3aed, #ec4899);
+  --primary: #1e3a8a;
+  --primary-dark: #172554;
+  --primary-light: #dbeafe;
+  --secondary: #2563eb;
+  --accent: #60a5fa;
+  --gradient: linear-gradient(135deg, #1e3a8a, #2563eb, #60a5fa);
+  --gradient-primary: linear-gradient(135deg, #1e3a8a, #2563eb);
+  --gradient-accent: linear-gradient(135deg, #2563eb, #60a5fa);
 
   --bg-body: #f8fafc;
   --bg-surface: #ffffff;
   --bg-muted: #f1f5f9;
   --bg-section-alt: #f1f5f9;
   --bg-nav-mobile: #ffffff;
-  --bg-glass: rgba(238, 242, 255, 0.88);
+  --bg-glass: rgba(248, 250, 252, 0.92);
 
   --text-primary: #0f172a;
   --text-secondary: #475569;
@@ -203,23 +204,92 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase !important;
 }
 
+[data-theme="light"] .navbar-default .navbar-nav > li > a,
+[data-theme="light"] .navbar.shrink .navbar-nav > li > a {
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .navbar-default .navbar-nav > li > a:hover,
+[data-theme="light"] .navbar-default .navbar-nav > li > a.active,
+[data-theme="light"] .navbar.shrink .navbar-nav > li > a:hover,
+[data-theme="light"] .navbar.shrink .navbar-nav > li > a.active {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.16) !important;
+}
+
+[data-theme="light"] .navbar-brand,
+[data-theme="light"] .navbar.shrink .navbar-brand {
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .navbar-toggler-icon,
+[data-theme="light"] .navbar-toggler-icon::before,
+[data-theme="light"] .navbar-toggler-icon::after {
+  background: #1e3a8a !important;
+}
+
 .navbar.shrink {
   padding: 8px 0 !important;
-  background: var(--bg-glass) !important;
+  background: rgba(248, 250, 252, 0.96) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;
-  box-shadow: var(--shadow-md) !important;
-  border-bottom: 1px solid var(--border) !important;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08) !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9) !important;
 }
 
-.navbar.shrink .navbar-nav > li > a {
-  color: var(--text-secondary) !important;
+/* Light-theme: when navbar is scrolled use navy background and white text for contrast */
+[data-theme="light"] .navbar.shrink {
+  background: var(--primary) !important; /* navy */
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(30, 58, 138, 0.12) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
 }
 
-.navbar.shrink .navbar-nav > li > a:hover,
-.navbar.shrink .navbar-nav > li > a.active {
-  color: var(--primary) !important;
-  background: var(--primary-light) !important;
+[data-theme="light"] .navbar.shrink .navbar-nav > li > a {
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .navbar.shrink .navbar-nav > li > a:hover,
+[data-theme="light"] .navbar.shrink .navbar-nav > li > a.active {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Dark-theme: mirror the scrolled navy navbar and pale text */
+[data-theme="dark"] .navbar.shrink {
+  background: #1e3a8a !important; /* match light-theme navy */
+  color: #f8fafc !important; /* pale white */
+  box-shadow: 0 6px 20px rgba(30, 58, 138, 0.12) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+}
+
+[data-theme="dark"] .navbar.shrink .navbar-nav > li > a {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .navbar.shrink .navbar-nav > li > a:hover,
+[data-theme="dark"] .navbar.shrink .navbar-nav > li > a.active {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Calligraphic brand text for dark theme */
+[data-theme="dark"] .brand-text {
+  color: rgba(248, 250, 252, 0.92) !important; /* pale white */
+  -webkit-text-fill-color: rgba(248, 250, 252, 0.92) !important;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.4) !important;
+}
+
+[data-theme="dark"] .navbar.shrink .brand-text {
+  color: #f8fafc !important;
+  -webkit-text-fill-color: #f8fafc !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.45) !important;
+}
+
+[data-theme="dark"] .navbar.shrink .navbar-toggler-icon,
+[data-theme="dark"] .navbar.shrink .navbar-toggler-icon::before,
+[data-theme="dark"] .navbar.shrink .navbar-toggler-icon::after {
+  background: #ffffff !important;
 }
 
 .top-nav-collapse {
@@ -240,13 +310,51 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--primary) !important;
 }
 
-.navbar-brand img {
-  width: 100px !important;
+.navbar-brand {
+  font-family: 'Chewy', 'Candal', cursive !important;
+  font-size: 1.8rem !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.02em !important;
+  text-decoration: none !important;
+  color: #ffffff !important;
   transition: all var(--transition) !important;
 }
 
-.navbar.shrink .navbar-brand img {
-  width: 80px !important;
+.navbar.shrink .navbar-brand {
+  font-size: 1.5rem !important;
+  color: #1e3a8a !important;
+}
+
+.brand-text {
+  display: inline-block;
+  font-family: inherit;
+}
+
+/* Calligraphic logo styling */
+.brand-text {
+  font-family: 'Great Vibes', 'Chewy', cursive !important;
+  font-size: 1.95rem !important;
+  line-height: 1 !important;
+  font-weight: 400 !important;
+  background: linear-gradient(90deg, #ffffff 0%, #e6eefc 70%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 6px 18px rgba(30, 58, 138, 0.12) !important;
+  transition: transform 0.25s ease, text-shadow 0.25s ease;
+}
+
+.navbar-brand:hover .brand-text,
+.navbar-brand:focus .brand-text {
+  transform: translateY(-2px) scale(1.02) !important;
+  text-shadow: 0 8px 22px rgba(30, 58, 138, 0.16) !important;
+}
+
+/* Scrolled (shrink) state: solid white text for readability on navy bar */
+[data-theme="light"] .navbar.shrink .brand-text {
+  -webkit-text-fill-color: #ffffff !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.12) !important;
 }
 
 .navbar-nav {
@@ -264,6 +372,17 @@ h1, h2, h3, h4, h5, h6 {
 .navbar.shrink .navbar-toggler-icon::before,
 .navbar.shrink .navbar-toggler-icon::after {
   background: var(--text-primary) !important;
+}
+
+/* Ensure brand and toggler are white when scrolled in light theme */
+[data-theme="light"] .navbar.shrink .navbar-brand {
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .navbar.shrink .navbar-toggler-icon,
+[data-theme="light"] .navbar.shrink .navbar-toggler-icon::before,
+[data-theme="light"] .navbar.shrink .navbar-toggler-icon::after {
+  background: #ffffff !important;
 }
 
 /* =============================================
@@ -329,11 +448,20 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 16px !important;
 }
 
-.banner-info h3 .typewrite {
+.banner-info h3 {
+  background: rgba(0, 0, 0, 0.35) !important;
+  display: inline-block !important;
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+}
+
+[data-theme="light"] .banner-info h3 .typewrite,
+[data-theme="dark"] .banner-info h3 .typewrite {
   font-size: 22px !important;
   font-weight: 400 !important;
-  color: rgba(255, 255, 255, 0.85) !important;
   letter-spacing: 0.5px !important;
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
 }
 
 .overlay-detail a i {
@@ -862,7 +990,11 @@ section[style*="bg-banner1.jpg"] h3.white {
 @media (max-width: 768px) {
   .banner-info { padding-top: 160px !important; }
   .banner-center h1 { font-size: 36px !important; }
-  .banner-info h3 .typewrite { font-size: 18px !important; }
+  [data-theme="light"] .banner-info h3 .typewrite,
+  [data-theme="dark"] .banner-info h3 .typewrite { 
+    font-size: 18px !important; 
+    color: #ffffff !important;
+  }
   .profile-image { width: 160px !important; height: 160px !important; }
   .section-padding { padding: 60px 0 !important; }
 }

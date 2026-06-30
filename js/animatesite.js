@@ -55,7 +55,13 @@ window.onload = function () {
     css.innerHTML = `
         .typewrite > .wrap { 
             border-right: 0.1em solid #fff;
+            color: #ffffff !important;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
             animation: blink-cursor 0.75s step-end infinite;
+        }
+        [data-theme="light"] .typewrite > .wrap,
+        [data-theme="dark"] .typewrite > .wrap {
+            color: #ffffff !important;
         }
         @keyframes blink-cursor {
             0%, 100% { border-color: transparent; }
