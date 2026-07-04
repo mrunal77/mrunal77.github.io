@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+(function() {
   var countEl = document.getElementById('site-visit-count');
   if (!countEl) return;
 
@@ -8,4 +8,4 @@ document.addEventListener('DOMContentLoaded', function() {
   count += 1;
   try { localStorage.setItem(key, count); } catch (e) {}
   try { countEl.textContent = Number(count).toLocaleString(); } catch (e) { countEl.textContent = count; }
-});
+})();
