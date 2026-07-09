@@ -453,7 +453,7 @@ article.body h1 {
 
 .social-icons:hover i.fa-facebook { color: #1877f2; }
 .social-icons:hover i.fa-linkedin { color: #0a66c2; }
-.social-icons:hover i.fa-github { color: #333; }
+.social-icons:hover i.fa-github { color: #f5f5f5; }
 .social-icons:hover i.fa-threads { color: #000; }
 .social-icons:hover i.fa-instagram { color: #e4405f; }
 
