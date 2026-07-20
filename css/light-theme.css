@@ -385,6 +385,15 @@ h1, h2, h3, h4, h5, h6 {
   background: #ffffff !important;
 }
 
+/* When expanded in light theme: hide middle bar, keep pseudo-elements white for X */
+[data-theme="light"] .navbar.shrink .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background: transparent !important;
+}
+
+[data-theme="light"] .navbar.shrink .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  background: transparent !important;
+}
+
 /* =============================================
    HERO / BANNER SECTION
    ============================================= */
@@ -1069,6 +1078,81 @@ section[style*="bg-banner1.jpg"] h3.white {
     background-attachment: scroll !important;
   }
 
+  /* Navbar collapsed menu: dark text on white background for light theme */
+  .navbar-collapse {
+    background: var(--bg-nav-mobile) !important;
+    backdrop-filter: none !important;
+    border-radius: var(--radius) !important;
+    box-shadow: var(--shadow-lg) !important;
+    padding: 12px !important;
+    margin-top: 8px !important;
+  }
+
+  [data-theme="light"] .navbar-collapse {
+    background: #ffffff !important;
+  }
+
+  [data-theme="light"] .navbar-collapse .theme-toggle i {
+    color: #334155 !important;
+  }
+
+  .navbar-default .navbar-nav > li > a {
+    color: var(--text-secondary) !important;
+    text-align: center !important;
+    padding: 10px 16px !important;
+    font-size: 14px !important;
+  }
+
+  [data-theme="light"] .navbar-default .navbar-nav > li > a {
+    color: #334155 !important;
+  }
+
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a.active {
+    color: var(--primary) !important;
+    background: var(--primary-light) !important;
+  }
+
+  [data-theme="light"] .navbar-default .navbar-nav > li > a:hover,
+  [data-theme="light"] .navbar-default .navbar-nav > li > a.active {
+    color: #1e3a8a !important;
+    background: #dbeafe !important;
+  }
+
+  .navbar .nav-link.active {
+    color: var(--primary) !important;
+    border-left: 3px solid var(--primary) !important;
+    background: var(--primary-light) !important;
+  }
+
+  [data-theme="light"] .navbar .nav-link.active {
+    color: #1e3a8a !important;
+    border-left-color: #1e3a8a !important;
+    background: #dbeafe !important;
+  }
+
+  /* When scrolled + hamburger opened: dark text on white dropdown */
+  [data-theme="light"] .navbar.shrink .navbar-collapse {
+    background: #ffffff !important;
+  }
+
+  [data-theme="light"] .navbar.shrink .navbar-collapse .navbar-nav > li > a {
+    color: #334155 !important;
+    background: transparent !important;
+  }
+
+  [data-theme="light"] .navbar.shrink .navbar-collapse .navbar-nav > li > a:hover,
+  [data-theme="light"] .navbar.shrink .navbar-collapse .navbar-nav > li > a.active {
+    color: #1e3a8a !important;
+    background: #dbeafe !important;
+  }
+
+  [data-theme="light"] .navbar.shrink .navbar-collapse .navbar .nav-link.active {
+    color: #1e3a8a !important;
+    border-left-color: #1e3a8a !important;
+    background: #dbeafe !important;
+  }
+
   .ser-title,
   h2.ser-title,
   .educationTitle h2,
@@ -1292,43 +1376,11 @@ section[style*="bg-banner1.jpg"] h3.white {
     font-size: 12px !important;
   }
 
-  .navbar-collapse {
-    background: var(--bg-nav-mobile) !important;
-    backdrop-filter: none !important;
-    border-radius: var(--radius) !important;
-    box-shadow: var(--shadow-lg) !important;
-    padding: 12px !important;
-    margin-top: 8px !important;
-  }
-
   .navbar.shrink .navbar-collapse {
     background: var(--bg-nav-mobile) !important;
   }
 
-  .navbar-default .navbar-nav > li > a,
-  [data-theme="light"] .navbar-default .navbar-nav > li > a {
-    color: var(--text-secondary) !important;
-    text-align: center !important;
-    padding: 10px 16px !important;
-    font-size: 14px !important;
-  }
-
-  .navbar-default .navbar-nav > li > a:hover,
-  .navbar-default .navbar-nav > li > a.active,
-  [data-theme="light"] .navbar-default .navbar-nav > li > a:hover,
-  [data-theme="light"] .navbar-default .navbar-nav > li > a.active {
-    color: var(--primary) !important;
-    background: var(--primary-light) !important;
-  }
-
-  .navbar .nav-link.active,
-  [data-theme="light"] .navbar .nav-link.active {
-    color: var(--primary) !important;
-    border-left: 3px solid var(--primary) !important;
-    background: var(--primary-light) !important;
-  }
-
-  [data-theme="light"] .navbar-collapse {
+  [data-theme="light"] .navbar.shrink .navbar-collapse {
     background: #ffffff !important;
   }
 
