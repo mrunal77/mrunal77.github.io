@@ -415,3 +415,116 @@ img {
 #extra-skill .extra-skill{
     margin-bottom: 35px;
 }
+
+/* Mobile overrides for education section */
+@media (max-width: 768px) {
+  .banner {
+    min-height: auto !important;
+  }
+
+  .bg-color {
+    min-height: auto !important;
+  }
+
+  .banner-info {
+    padding-top: 140px !important;
+    min-height: auto !important;
+  }
+
+  .banner-text h1 {
+    font-size: 28px !important;
+  }
+
+  .profile-image {
+    width: 130px !important;
+    height: 130px !important;
+  }
+
+  .service-info {
+    margin-bottom: 20px !important;
+  }
+
+  .service-skill {
+    margin-bottom: 20px !important;
+  }
+
+  .card {
+    height: auto !important;
+    margin-bottom: 16px !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .banner-info {
+    padding-top: 110px !important;
+  }
+
+  .banner-text h1 {
+    font-size: 24px !important;
+  }
+
+  .profile-image {
+    width: 110px !important;
+    height: 110px !important;
+  }
+
+  .service-info {
+    margin-bottom: 12px !important;
+  }
+
+  .service-skill {
+    margin-bottom: 16px !important;
+  }
+
+  .icon i,
+  .icon1 #graduation,
+  .icon2 #twelth,
+  .icon3 #cert,
+  .icon4 #diploma {
+    font-size: 30px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .card {
+    height: auto !important;
+  }
+}
+
+/* Mobile overrides for education section */
+@media (max-width: 768px) {
+  .service-info {
+    margin-bottom: 20px !important;
+  }
+  
+  .service-skill {
+    margin-bottom: 20px !important;
+  }
+
+  .icon i,
+  .icon1 #graduation,
+  .icon2 #twelth,
+  .icon3 #cert,
+  .icon4 #diploma {
+    font-size: 36px !important;
+    margin-bottom: 16px !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .service-info {
+    margin-bottom: 12px !important;
+  }
+
+  .service-skill {
+    margin-bottom: 16px !important;
+  }
+
+  .icon i,
+  .icon1 #graduation,
+  .icon2 #twelth,
+  .icon3 #cert,
+  .icon4 #diploma {
+    font-size: 30px !important;
+    margin-bottom: 12px !important;
+  }
+}
