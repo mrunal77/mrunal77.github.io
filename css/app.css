@@ -22,6 +22,16 @@ section {
 	scroll-margin-top: 70px;
 }
 
+/* Prevent horizontal overflow globally */
+html {
+	overflow-x: hidden;
+}
+
+body {
+	overflow-x: hidden;
+	max-width: 100vw;
+}
+
 .navbar .nav-link {
 	transition: all 0.3s ease;
 	position: relative;
@@ -934,6 +944,24 @@ article.body h1 {
 
 	.experience-section p {
 		color: rgba(255, 255, 255, 0.8) !important;
+	}
+
+	/* Fix fixed backgrounds causing overflow on mobile */
+	.banner,
+	section[style*="bg-banner1.jpg"] {
+		background-attachment: scroll !important;
+	}
+
+	/* Prevent absolute positioned elements from causing overflow */
+	.overlay-detail {
+		left: 0 !important;
+		width: 100% !important;
+	}
+
+	/* Ensure container doesn't overflow */
+	.container {
+		max-width: 100% !important;
+		overflow: hidden;
 	}
 }
 

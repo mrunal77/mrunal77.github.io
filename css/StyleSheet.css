@@ -11,6 +11,11 @@
     -ms-user-select: none;
     user-select: none;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 ol,

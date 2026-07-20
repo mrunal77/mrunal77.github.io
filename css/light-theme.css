@@ -631,8 +631,14 @@ hr.botm-line3 {
 }
 
 section[style*="bg-banner1.jpg"] {
-  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4f46e5 100%) !important;
   padding: 80px 0 !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+[data-theme="light"] section[style*="bg-banner1.jpg"] {
+  background-image: none !important;
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4f46e5 100%) !important;
 }
 
 section[style*="bg-banner1.jpg"] h3.white {
@@ -1039,6 +1045,12 @@ section[style*="bg-banner1.jpg"] h3.white {
   }
   .profile-image { width: 140px !important; height: 140px !important; }
   .section-padding { padding: 50px 0 !important; }
+
+  /* Fix fixed backgrounds causing overflow on mobile */
+  .banner,
+  section[style*="bg-banner1.jpg"] {
+    background-attachment: scroll !important;
+  }
 
   .ser-title,
   h2.ser-title,
