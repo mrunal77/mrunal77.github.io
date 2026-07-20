@@ -634,11 +634,28 @@ section[style*="bg-banner1.jpg"] {
   padding: 80px 0 !important;
   background-size: cover !important;
   background-position: center !important;
+  position: relative !important;
 }
 
-[data-theme="light"] section[style*="bg-banner1.jpg"] {
-  background-image: none !important;
-  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4f46e5 100%) !important;
+section[style*="bg-banner1.jpg"]::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+[data-theme="light"] section[style*="bg-banner1.jpg"]::before {
+  background: rgba(30, 27, 75, 0.45) !important;
+}
+
+[data-theme="dark"] section[style*="bg-banner1.jpg"]::before {
+  background: rgba(15, 23, 42, 0.5) !important;
+}
+
+section[style*="bg-banner1.jpg"] > * {
+  position: relative !important;
+  z-index: 1 !important;
 }
 
 section[style*="bg-banner1.jpg"] h3.white {
@@ -1288,7 +1305,8 @@ section[style*="bg-banner1.jpg"] h3.white {
     background: var(--bg-nav-mobile) !important;
   }
 
-  .navbar-default .navbar-nav > li > a {
+  .navbar-default .navbar-nav > li > a,
+  [data-theme="light"] .navbar-default .navbar-nav > li > a {
     color: var(--text-secondary) !important;
     text-align: center !important;
     padding: 10px 16px !important;
@@ -1296,15 +1314,22 @@ section[style*="bg-banner1.jpg"] h3.white {
   }
 
   .navbar-default .navbar-nav > li > a:hover,
-  .navbar-default .navbar-nav > li > a.active {
+  .navbar-default .navbar-nav > li > a.active,
+  [data-theme="light"] .navbar-default .navbar-nav > li > a:hover,
+  [data-theme="light"] .navbar-default .navbar-nav > li > a.active {
     color: var(--primary) !important;
     background: var(--primary-light) !important;
   }
 
-  .navbar .nav-link.active {
+  .navbar .nav-link.active,
+  [data-theme="light"] .navbar .nav-link.active {
     color: var(--primary) !important;
     border-left: 3px solid var(--primary) !important;
     background: var(--primary-light) !important;
+  }
+
+  [data-theme="light"] .navbar-collapse {
+    background: #ffffff !important;
   }
 
   .brand-text {
