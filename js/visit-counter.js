@@ -1,11 +1,12 @@
-// Visitor counter using CounterAPI.dev (https://counterapi.dev)
+// Visitor counter via Cloudflare Worker + KV
 (function() {
   function initCounter() {
     var countEl = document.getElementById('site-visit-count');
     if (!countEl) return;
 
-    var namespace = 'mrunal77githubio';
-    var key = 'homepage';
+    // Cloudflare Worker visit counter
+    var WORKER_URL = 'https://mrunal77-visit-counter.mrunal77.workers.dev';
+
     var cacheKey = 'site-visit-count-cached';
     var sessionKey = 'site-visited-session';
 
@@ -33,9 +34,7 @@
       isNewSession = true;
     }
 
-    var endpoint = isNewSession
-      ? 'https://api.counterapi.dev/v1/' + encodeURIComponent(namespace) + '/' + encodeURIComponent(key) + '/up'
-      : 'https://api.counterapi.dev/v1/' + encodeURIComponent(namespace) + '/' + encodeURIComponent(key) + '/';
+    var endpoint = WORKER_URL + (isNewSession ? '/up' : '/');
 
     fetch(endpoint, { cache: 'no-store' })
       .then(function(res) {

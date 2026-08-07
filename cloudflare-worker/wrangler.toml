@@ -1,0 +1,10 @@
+name = "mrunal77-visit-counter"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+
+# Free KV namespace for storing the visit count.
+# Created automatically on first deploy with: npx wrangler deploy
+[[kv_namespaces]]
+binding = "COUNTER"
+id = "dd882a148458402ca1b3ed11eacd3a4e"
+preview_id = "dd882a148458402ca1b3ed11eacd3a4e"
