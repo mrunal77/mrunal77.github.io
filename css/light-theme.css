@@ -225,7 +225,7 @@ h1, h2, h3, h4, h5, h6 {
 [data-theme="light"] .navbar-toggler-icon,
 [data-theme="light"] .navbar-toggler-icon::before,
 [data-theme="light"] .navbar-toggler-icon::after {
-  background: #1e3a8a !important;
+  background: #ffffff !important;
 }
 
 .navbar.shrink {
@@ -361,7 +361,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center !important;
 }
 
-/* Hamburger to X */
+/* Hamburger bars — closed state colors */
 .navbar-toggler-icon,
 .navbar-toggler-icon::before,
 .navbar-toggler-icon::after {
@@ -385,12 +385,11 @@ h1, h2, h3, h4, h5, h6 {
   background: #ffffff !important;
 }
 
-/* When expanded in light theme: hide middle bar, keep pseudo-elements white for X */
-[data-theme="light"] .navbar.shrink .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-  background: transparent !important;
-}
-
-[data-theme="light"] .navbar.shrink .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+/* Open: middle bar must be transparent for X (wins over theme color rules) */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon,
+[data-theme="light"] .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon,
+[data-theme="light"] .navbar.shrink .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon,
+[data-theme="dark"] .navbar.shrink .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: transparent !important;
 }
 

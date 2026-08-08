@@ -107,6 +107,14 @@ window.onload = function () {
     });
 
     $('.navbar-nav>li>a').on('click', function(){
-        $('.navbar-collapse').collapse('hide');
+        var collapseEl = document.getElementById('myNavbar');
+        if (collapseEl && typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+            var instance = bootstrap.Collapse.getInstance(collapseEl);
+            if (instance) {
+                instance.hide();
+            } else if (collapseEl.classList.contains('show')) {
+                bootstrap.Collapse.getOrCreateInstance(collapseEl, { toggle: false }).hide();
+            }
+        }
     });
 })(jQuery);

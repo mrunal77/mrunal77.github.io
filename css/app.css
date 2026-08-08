@@ -220,7 +220,7 @@ article.body h1 {
 	transform: rotate(0);
 }
 
-/* Bootstrap 5 Hamburger to X Animation */
+/* Bootstrap 5 hamburger ↔ X (driven by aria-expanded only) */
 .navbar-toggler {
 	border: none;
 	padding: 0.5rem 0.75rem;
@@ -229,16 +229,16 @@ article.body h1 {
 
 .navbar-toggler:focus {
 	box-shadow: none;
+	outline: none;
 }
 
-/* Base hamburger icon styles */
 .navbar-toggler-icon {
 	display: inline-block;
 	width: 22px;
 	height: 2px;
 	background: white;
 	position: relative;
-	transition: all 0.3s ease;
+	transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .navbar-toggler-icon::before,
@@ -249,7 +249,7 @@ article.body h1 {
 	height: 2px;
 	background: white;
 	left: 0;
-	transition: all 0.3s ease;
+	transition: top 0.3s ease, transform 0.3s ease, background 0.3s ease;
 }
 
 .navbar-toggler-icon::before {
@@ -260,94 +260,32 @@ article.body h1 {
 	top: 7px;
 }
 
-/* Default state - hamburger (3 lines) */
-.navbar-toggler .navbar-toggler-icon {
-	background: white !important;
+/* Closed: three-line hamburger */
+.navbar-toggler[aria-expanded="false"] .navbar-toggler-icon {
+	background: white;
 }
 
-.navbar-toggler .navbar-toggler-icon::before {
-	top: -7px !important;
-	transform: rotate(0deg) !important;
+.navbar-toggler[aria-expanded="false"] .navbar-toggler-icon::before {
+	top: -7px;
+	transform: rotate(0deg);
 }
 
-.navbar-toggler .navbar-toggler-icon::after {
-	top: 7px !important;
-	transform: rotate(0deg) !important;
+.navbar-toggler[aria-expanded="false"] .navbar-toggler-icon::after {
+	top: 7px;
+	transform: rotate(0deg);
 }
 
-/* When menu is open (aria-expanded="true") - show X */
+/* Open: X */
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-	background: transparent !important;
-}
-
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
-	top: 0 !important;
-	transform: rotate(45deg) !important;
-}
-
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
-	top: 0 !important;
-	transform: rotate(-45deg) !important;
-}
-
-.navbar-toggler:focus {
-	box-shadow: none;
-}
-
-.navbar-toggler-icon {
-	display: inline-block;
-	width: 22px;
-	height: 2px;
-	background: white;
-	position: relative;
-	transition: all 0.3s ease;
-}
-
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-	content: '';
-	position: absolute;
-	width: 22px;
-	height: 2px;
-	background: white;
-	left: 0;
-	transition: all 0.3s ease;
-}
-
-.navbar-toggler-icon::before {
-	top: -7px;
-}
-
-.navbar-toggler-icon::after {
-	top: 7px;
-}
-
-/* Default (menu closed) - show hamburger */
-.navbar-toggler .navbar-toggler-icon {
-	background: white;
-}
-
-.navbar-toggler .navbar-toggler-icon::before {
-	top: -7px;
-	transform: rotate(0);
-}
-
-.navbar-toggler .navbar-toggler-icon::after {
-	top: 7px;
-	transform: rotate(0);
-}
-
-/* When menu is open (has .collapsed class removed by Bootstrap) - show X */
-.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
 	background: transparent;
 }
 
-.navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
 	top: 0;
 	transform: rotate(45deg);
 }
 
-.navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
 	top: 0;
 	transform: rotate(-45deg);
 }
